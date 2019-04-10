@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+  CREANDO API´S
+    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  </div>
+
+  <div class="ion-paddingdos" *ngIf="paises"> 
+
+    <ion-card *ngFor="let item of paises">
+
+       <ion-card-header>
+
+         <ion-card-title>{{item.name}}</ion-card-title>   
+        </ion-card-header>
+      <ion-card-content>
+
+        <ion-img src="{{ item.flag }}"></ion-img >                <!-- quitar los corchetes de src para llamar variables de rutas desde el ts --> 
+
+          <ion-card-subtitle>
+            poblacion: {{item.population}}
+          </ion-card-subtitle>
+
+          <ion-card-subtitle>
+
+          <ion-item click= "buttonClick()">
+                <ion-label>
+                capital: {{click}}
+              </ion-label>
+              </ion-item>
+          </ion-card-subtitle>
+
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+
+  </div>
+
+
+
+
+</ion-content>
