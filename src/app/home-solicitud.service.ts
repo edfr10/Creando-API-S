@@ -11,12 +11,13 @@ export class HomeSolicitudService {
 
   constructor(private http : HttpClient ) { }
 
-  private httpUrl = 'https://restcountries.eu/rest/v2/all'; 
+  private httpUrl = 'http://localhost:9500'; 
 
 
   getPaises(): Observable <any[]> {                                          // este metodo va a recibir un objeto de tipo array 
     
-    return this.http.get<any[]> (this.httpUrl);                           //  una funcion donde me retonra un objeto tipo json, lo cual me devuelve, todo la data del url en formato json 
+    return this.http.get<any[]> (this.httpUrl);                         //  una funcion donde me retonra un objeto tipo json, lo cual me devuelve, todo la data del url en formato json 
                                                                           
   } 
 }
+
